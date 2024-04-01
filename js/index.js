@@ -25,3 +25,16 @@ $(document).ready(function() {
       }, 1000);
   });
 });
+
+
+$(document).ready(function() {
+    // Function to set width of boxes to match the width of the 'Ideation & Brainstorm' h2 element
+    function setBoxWidth() {
+        var h2Width = $('h2:contains("Ideation & Brainstorm")').outerWidth();
+        $('.box').css('width', h2Width);
+    }
+
+    // Call the function initially and on window resize
+    setBoxWidth();
+    $(window).resize(setBoxWidth);
+});
